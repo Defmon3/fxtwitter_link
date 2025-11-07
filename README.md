@@ -1,50 +1,37 @@
 # X: Copy fxtwitter URL Button with Popup
 
-A lightweight Tampermonkey userscript that adds a **native-style "Copy fxtwitter URL" button** to every tweet on **X (Twitter)**.  
-Copies the tweet’s `fxtwitter.com` link (with `/en` suffix) to clipboard, showing a **1-second “Copied” popup** for instant feedback.
+A minimal Tampermonkey userscript that adds a **native-style fxtwitter copy button** to every tweet on **X (Twitter)**.
+
+![Screenshot](https://github.com/Defmon3/fxtwitter_link/blob/c2afa57167a471a5bcf3956ddd0ab2571f1dd2a5/readme_image.png?raw=true)
 
 ---
 
 ## ✨ Features
 
-- Adds a small **native-styled icon** next to each tweet action bar  
-- **Copies** the `fxtwitter.com` version of the tweet URL (for easy embedding/viewing)  
-- **Shift-click** → copy original `x.com` URL instead  
-- 1-second **"Copied"** popup for quick confirmation  
-- Smooth opacity hover animation  
-- Works on both `https://x.com/*` and `https://pro.x.com/*`  
-- Auto-injected via **DOM observer** (no reloads needed)
+- Native-looking icon beside tweet actions  
+- Copies the `fxtwitter.com` version of any tweet  
+- **Shift-click** to copy the original `x.com` URL  
+- Works on both `x.com` and `pro.x.com`  
+- Injects automatically into new tweets — no reload needed
 
 ---
 
 ## 🧩 Installation
 
-1. Install **[Tampermonkey](https://www.tampermonkey.net/)** for your browser.  
-2. Click the button below to install the script:
-
-   **➡ [Install via GitHub](https://raw.githubusercontent.com/Defmon3/fxtwitter_link/refs/heads/main/fx-twitter-en.js)**
-
-3. Visit [x.com](https://x.com) — you’ll now see a copy icon beside each tweet.
+1. Install [Tampermonkey](https://www.tampermonkey.net/).  
+2. Install via GitHub:  
+   **➡ [Install Script](https://github.com/defmon3/x-fxtwitter-copy/raw/main/x-fxtwitter-copy.user.js)**  
+3. Open [x.com](https://x.com) and use the new copy icon.
 
 ---
 
-## ⚙️ Behavior
+## 🧠 Implementation
 
-| Action | Result |
-|--------|---------|
-| Click | Copies `fxtwitter.com/.../en` URL |
-| Shift + Click | Copies original `x.com` URL |
-| Hover | Increases icon opacity |
-| After Copy | Shows “Copied” popup for 1 s |
+Uses `MutationObserver` to detect new tweets, injects an SVG icon into each tweet footer, and copies URLs using `GM_setClipboard`.
 
 ---
 
-## 🧠 How It Works
+## 📄 License
 
-- Observes new tweets using `MutationObserver`  
-- Locates each tweet’s action bar (`div[role="group"]`)  
-- Injects a minimal SVG-based copy icon  
-- Uses `GM_setClipboard` to safely copy links  
-- Automatically cleans up duplicate buttons
-
----
+[MIT](LICENSE)  
+© 2025 [defmon3](https://github.com/defmon3)
