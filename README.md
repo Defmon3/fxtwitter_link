@@ -22,7 +22,7 @@ Copies the tweet’s `fxtwitter.com` link (with `/en` suffix) to clipboard, show
 1. Install **[Tampermonkey](https://www.tampermonkey.net/)** for your browser.  
 2. Click the button below to install the script:
 
-   **➡ [Install via GitHub](https://github.com/defmon3/x-fxtwitter-copy/raw/main/x-fxtwitter-copy.user.js)**
+   **➡ [Install via GitHub](https://raw.githubusercontent.com/Defmon3/fxtwitter_link/refs/heads/main/fx-twitter-en.js)**
 
 3. Visit [x.com](https://x.com) — you’ll now see a copy icon beside each tweet.
 
